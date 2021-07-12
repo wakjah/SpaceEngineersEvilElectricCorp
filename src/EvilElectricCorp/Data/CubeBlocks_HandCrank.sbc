@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PhysicalItems>
+    <PhysicalItem>
+      <Id>
+        <TypeId>Ingot</TypeId>
+        <SubtypeId>HandCrankEnergy</SubtypeId>
+      </Id>
+      <DisplayName>Hand Crank Energy</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\gravel_ingot.dds</Icon>
+      <Size>
+        <X>0.072</X>
+        <Y>0.072</Y>
+        <Z>0.072</Z>
+      </Size>
+      <Mass>1</Mass>
+      <Volume>0.000001</Volume>
+      <Model>Models\Ingots\stone_ingot.mwm</Model>
+    </PhysicalItem>
+  </PhysicalItems>
+  
+  <CubeBlocks>
+
+    <Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+      <Id>
+        <TypeId>Reactor</TypeId>
+        <SubtypeId>HandCrank</SubtypeId>
+      </Id>
+      <DisplayName>Hand Crank</DisplayName>
+      <Description>Hand Crank - use this to get started on a large grid, or if you ever run out of power completely</Description>
+      <Icon>Textures\GUI\Icons\Cubes\WindTurbine.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <GuiVisible>false</GuiVisible>
+      <PlaceDecals>false</PlaceDecals>
+      <ResearchGroup>Tier00Basics</ResearchGroup>
+      <ResearchCost>5</ResearchCost>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <Center x="0" y="0" z="0" />
+      <ModelOffset x="0" y="2.5" z="0" />
+      <Model>Models\HandCrank.mwm</Model>
+      <Components>
+        <Component Subtype="InteriorPlate" Count="10" />
+        <Component Subtype="Motor" Count="8" />
+        <Component Subtype="Construction" Count="20" />
+        <Component Subtype="Girder" Count="24" />
+        <Component Subtype="Computer" Count="2" />
+        <Component Subtype="InteriorPlate" Count="30" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true" />
+      </MountPoints>
+      <MirroringY>Z</MirroringY>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\HandCrank_Construction1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\HandCrank_Construction2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\HandCrank_Construction3.mwm" />
+      </BuildProgressModels>
+
+      <BlockPairName>HandCrank</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <DamageEffectId>214</DamageEffectId>
+
+      <ActionSound>ArcBlockWindTurbine</ActionSound>
+      <DamagedSound>ParticleElectrical</DamagedSound>
+
+      <ResourceSourceGroup>SolarPanels</ResourceSourceGroup>
+      <MaxPowerOutput>0.84</MaxPowerOutput>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <FuelId>
+        <TypeId>Ingot</TypeId>
+        <SubtypeId>HandCrankEnergy</SubtypeId>
+      </FuelId>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <IsAirTight>false</IsAirTight>
+
+      <VoxelPlacement>
+        <StaticMode>
+          <PlacementMode>OutsideVoxel</PlacementMode>
+        </StaticMode>
+        <DynamicMode>
+          <PlacementMode>OutsideVoxel</PlacementMode>
+        </DynamicMode>
+      </VoxelPlacement>
+
+      <PCU>55</PCU>
+    </Definition>
+    
+  </CubeBlocks>
+</Definitions>
