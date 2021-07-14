@@ -16,11 +16,11 @@
       <ModelOffset x="0" y="0" z="0" />
       <Model>Models\Cubes\Large\CargoContainerLarge.mwm</Model>
       <Components>
-        <Component Subtype="InteriorPlate" Count="500" />
-        <Component Subtype="Construction" Count="200" />
-        <Component Subtype="MetalGrid" Count="60" />
-        <Component Subtype="SmallTube" Count="120" />
-        <Component Subtype="Motor" Count="50" />
+        <Component Subtype="InteriorPlate" Count="300" />
+        <Component Subtype="Construction" Count="100" />
+        <Component Subtype="MetalGrid" Count="100" />
+        <Component Subtype="SmallTube" Count="60" />
+        <Component Subtype="Motor" Count="25" />
         <Component Subtype="Display" Count="10" />
         <Component Subtype="Computer" Count="80" />
         <Component Subtype="Construction" Count="20" />

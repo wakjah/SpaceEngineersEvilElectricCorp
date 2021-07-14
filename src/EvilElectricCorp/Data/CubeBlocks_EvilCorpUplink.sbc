@@ -36,16 +36,14 @@
       <Model>Models\Cubes\Large\antenna.mwm</Model>
       <Components>
         <Component Subtype="SteelPlate" Count="100" />
-        <Component Subtype="LargeTube" Count="80" />
+        <Component Subtype="LargeTube" Count="40" />
         <Component Subtype="SmallTube" Count="100" />
-        <Component Subtype="Construction" Count="500" />
-        <Component Subtype="Computer" Count="200" />
+        <Component Subtype="Construction" Count="100" />
+        <Component Subtype="Computer" Count="80" />
         <Component Subtype="RadioCommunication" Count="120" />
         <Component Subtype="SteelPlate" Count="200" />
-        <Component Subtype="PowerCell" Count="120" />
       </Components>
       <CriticalComponent Subtype="RadioCommunication" Index="0" />
-      <CriticalComponent Subtype="PowerCell" Index="1" />
       <MountPoints>
         <MountPoint Side="Bottom" ExclusionMask="1" PropertiesMask="2" StartX="0" StartY="0" EndX="1" EndY="2" />
       </MountPoints>
