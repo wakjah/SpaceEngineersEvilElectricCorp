@@ -1,6 +1,5 @@
 ﻿using Sandbox.ModAPI;
 using VRage.Game;
-using VRage.Game.ModAPI;
 using VRage.ObjectBuilders;
 
 namespace EvilElectricCorpMod
@@ -8,7 +7,6 @@ namespace EvilElectricCorpMod
     public class ToggleableReactorLogic
     {
         private readonly IMyReactor _reactor;
-        private readonly IMyInventory _inventory;
         private readonly MyObjectBuilder_Ingot _energyBuilder;
         private readonly SerializableDefinitionId _energyId;
         private bool _running = false;
@@ -29,7 +27,6 @@ namespace EvilElectricCorpMod
         public ToggleableReactorLogic(IMyReactor reactor, string energySubtypeName)
         {
             _reactor = reactor;
-            _inventory = reactor.GetInventory();
             _energyBuilder = new MyObjectBuilder_Ingot() { SubtypeName = energySubtypeName };
             _energyId = new SerializableDefinitionId(typeof(MyObjectBuilder_Ingot), energySubtypeName);
         }
@@ -48,18 +45,20 @@ namespace EvilElectricCorpMod
 
         private void Run()
         {
-            if (Globals.IsServer)
+            var inventory = _reactor.GetInventory();
+            if (inventory != null) 
             {
-                int deficit = 1000 - (int)_inventory.GetItemAmount(_energyId);
-                _inventory.AddItems(deficit, _energyBuilder);
+                int deficit = 1000 - (int)inventory.GetItemAmount(_energyId);
+                inventory.AddItems(deficit, _energyBuilder);
             }
         }
 
         private void Stop()
         {
-            if (Globals.IsServer)
+            var inventory = _reactor.GetInventory();
+            if (inventory != null)
             {
-                _inventory.RemoveItemsOfType(_inventory.GetItemAmount(_energyId), _energyBuilder);
+                inventory.RemoveItemsOfType(inventory.GetItemAmount(_energyId), _energyBuilder);
             }
         }
     }

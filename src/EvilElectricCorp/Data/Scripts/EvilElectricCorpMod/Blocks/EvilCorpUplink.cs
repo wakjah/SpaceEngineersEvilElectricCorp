@@ -21,11 +21,14 @@ namespace EvilElectricCorpMod.Blocks
 
         public override void Init(MyObjectBuilder_EntityBase objectBuilder)
         {
-            base.Init(objectBuilder);
+            base.NeedsUpdate = MyEntityUpdateEnum.BEFORE_NEXT_FRAME;
+        }
 
+        public override void UpdateOnceBeforeFrame()
+        {
             _toggleableReactorLogic = new ToggleableReactorLogic(Reactor, "RemoteEnergy");
 
-            base.NeedsUpdate |= MyEntityUpdateEnum.EACH_100TH_FRAME;
+            base.NeedsUpdate = MyEntityUpdateEnum.EACH_100TH_FRAME;
 
             ((IMyTerminalBlock)Entity).ShowInInventory = false;
         }

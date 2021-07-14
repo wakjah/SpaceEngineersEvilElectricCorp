@@ -13,11 +13,13 @@ namespace EvilElectricCorpMod.Blocks
         public bool ProductionEnabled
         {
             get { return _toggleableReactorLogic.Running; }
-            set
-            {
-                _toggleableReactorLogic.Running = value;
-                _spinningSubpartLogic.ShouldSpin = value;
-            }
+            set { _toggleableReactorLogic.Running = value; }
+        }
+
+        public bool Spin
+        {
+            get { return _spinningSubpartLogic.ShouldSpin; }
+            set { _spinningSubpartLogic.ShouldSpin = value; }
         }
 
         private ToggleableReactorLogic _toggleableReactorLogic;
