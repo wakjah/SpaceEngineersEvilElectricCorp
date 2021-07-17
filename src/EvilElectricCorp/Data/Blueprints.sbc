@@ -15,7 +15,7 @@
         <Item Amount="0.5" TypeId="Ingot" SubtypeId="Nickel" />
         <Item Amount="1" TypeId="Ingot" SubtypeId="Cobalt" />
       </Prerequisites>
-      <Result Amount="1" TypeId="PhysicalObject" SubtypeId="PowerCredit1" />
+      <Result Amount="1" TypeId="Component" SubtypeId="PowerCredit1" />
       <BaseProductionTimeInSeconds>12</BaseProductionTimeInSeconds>
       <IsPrimary>true</IsPrimary>
     </Blueprint>
@@ -34,7 +34,7 @@
         <Item Amount="0.5" TypeId="Ingot" SubtypeId="Nickel" />
         <Item Amount="1" TypeId="Ingot" SubtypeId="Magnesium" />
       </Prerequisites>
-      <Result Amount="1" TypeId="PhysicalObject" SubtypeId="PowerCredit1" />
+      <Result Amount="1" TypeId="Component" SubtypeId="PowerCredit1" />
       <BaseProductionTimeInSeconds>12</BaseProductionTimeInSeconds>
       <IsPrimary>true</IsPrimary>
     </Blueprint>
@@ -53,7 +53,7 @@
         <Item Amount="5" TypeId="Ingot" SubtypeId="Nickel" />
         <Item Amount="10" TypeId="Ingot" SubtypeId="Gold" />
       </Prerequisites>
-      <Result Amount="1" TypeId="PhysicalObject" SubtypeId="PowerCredit2" />
+      <Result Amount="1" TypeId="Component" SubtypeId="PowerCredit2" />
       <BaseProductionTimeInSeconds>24</BaseProductionTimeInSeconds>
       <IsPrimary>true</IsPrimary>
     </Blueprint>
@@ -72,7 +72,7 @@
         <Item Amount="5" TypeId="Ingot" SubtypeId="Nickel" />
         <Item Amount="10" TypeId="Ingot" SubtypeId="Platinum" />
       </Prerequisites>
-      <Result Amount="1" TypeId="PhysicalObject" SubtypeId="PowerCredit2" />
+      <Result Amount="1" TypeId="Component" SubtypeId="PowerCredit2" />
       <BaseProductionTimeInSeconds>24</BaseProductionTimeInSeconds>
       <IsPrimary>true</IsPrimary>
     </Blueprint>
@@ -92,7 +92,7 @@
         <Item Amount="15" TypeId="Ingot" SubtypeId="Silver" />
         <Item Amount="3" TypeId="Ingot" SubtypeId="Uranium" />
       </Prerequisites>
-      <Result Amount="1" TypeId="PhysicalObject" SubtypeId="PowerCredit3" />
+      <Result Amount="1" TypeId="Component" SubtypeId="PowerCredit3" />
       <BaseProductionTimeInSeconds>50</BaseProductionTimeInSeconds>
       <IsPrimary>true</IsPrimary>
     </Blueprint>

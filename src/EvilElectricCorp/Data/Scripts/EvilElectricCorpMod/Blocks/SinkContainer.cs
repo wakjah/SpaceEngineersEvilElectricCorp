@@ -13,7 +13,7 @@ namespace EvilElectricCorpMod.Blocks
 
         public PowerCreditDescriptor(string subtypeId, double kilowattHoursPerCredit)
         {
-            Id = new SerializableDefinitionId(typeof(MyObjectBuilder_PhysicalObject), subtypeId);
+            Id = new SerializableDefinitionId(typeof(MyObjectBuilder_Component), subtypeId);
             JoulesPerCredit = joulesFromKWh(kilowattHoursPerCredit);
         }
 
