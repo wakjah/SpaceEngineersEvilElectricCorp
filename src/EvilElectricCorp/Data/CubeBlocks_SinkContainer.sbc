@@ -6,7 +6,7 @@
         <TypeId>CargoContainer</TypeId>
         <SubtypeId>SinkContainer</SubtypeId>
       </Id>
-      <DisplayName>EvilCorp Electric Co. Pack Transporter</DisplayName>
+      <DisplayName>EvilCorp Electric Co. Credit Transporter</DisplayName>
       <Icon>Textures\GUI\Icons\Cubes\container_large.dds</Icon>
       <Description>Fill with resource packs to pay EvilCorp and get electricity</Description>
       <CubeSize>Large</CubeSize>
