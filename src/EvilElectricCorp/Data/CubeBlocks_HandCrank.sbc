@@ -28,7 +28,7 @@
       </Id>
       <DisplayName>Hand Crank</DisplayName>
       <Description>Hand Crank - use this to get started on a large grid, or if you ever run out of power completely</Description>
-      <Icon>Textures\GUI\Icons\Cubes\WindTurbine.dds</Icon>
+      <Icon>Textures\HandCrank.dds</Icon>
       <CubeSize>Large</CubeSize>
       <GuiVisible>false</GuiVisible>
       <PlaceDecals>false</PlaceDecals>
