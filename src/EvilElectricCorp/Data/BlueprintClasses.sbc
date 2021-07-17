@@ -9,7 +9,7 @@
 
     <Entry Class="Components" BlueprintSubtypeId="PowerCredit1Component_Cobalt" />
     <Entry Class="Components" BlueprintSubtypeId="PowerCredit1Component_Magnesium" />
-    <Entry Class="Components" BlueprintSubtypeId="PowerCredit2Component_Gold" />
+    <Entry Class="Components" BlueprintSubtypeId="PowerCredit2Component_SilverGold" />
     <Entry Class="Components" BlueprintSubtypeId="PowerCredit2Component_Platinum" />
     <Entry Class="Components" BlueprintSubtypeId="PowerCredit3Component_Uranium" />
 
