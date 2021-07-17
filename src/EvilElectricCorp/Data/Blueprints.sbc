@@ -7,7 +7,7 @@
         <SubtypeId>PowerCredit1Component_Cobalt</SubtypeId>
       </Id>
       <DisplayName>Power Credit 1 (Cobalt)</DisplayName>
-      <Icon>Textures\PowerCredit1_Item.dds</Icon>
+      <Icon>Textures\PowerCredit1_Recipe_Cobalt.dds</Icon>
       <Prerequisites>
         <Item Amount="0.8" TypeId="Ingot" SubtypeId="Stone" />
         <Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
@@ -26,7 +26,7 @@
         <SubtypeId>PowerCredit1Component_Magnesium</SubtypeId>
       </Id>
       <DisplayName>Power Credit 1 (Magnesium)</DisplayName>
-      <Icon>Textures\PowerCredit1_Item.dds</Icon>
+      <Icon>Textures\PowerCredit1_Recipe_Magnesium.dds</Icon>
       <Prerequisites>
         <Item Amount="0.8" TypeId="Ingot" SubtypeId="Stone" />
         <Item Amount="15" TypeId="Ingot" SubtypeId="Iron" />
@@ -43,16 +43,15 @@
     <Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>PowerCredit2Component_SilverGold</SubtypeId>
+        <SubtypeId>PowerCredit2Component_Gold</SubtypeId>
       </Id>
-      <DisplayName>Power Credit 2 (Silver/Gold)</DisplayName>
-      <Icon>Textures\PowerCredit2_Item.dds</Icon>
+      <DisplayName>Power Credit 2 (Gold)</DisplayName>
+      <Icon>Textures\PowerCredit2_Recipe_Gold.dds</Icon>
       <Prerequisites>
         <Item Amount="100" TypeId="Ingot" SubtypeId="Iron" />
         <Item Amount="10" TypeId="Ingot" SubtypeId="Silicon" />
         <Item Amount="5" TypeId="Ingot" SubtypeId="Nickel" />
-        <Item Amount="5" TypeId="Ingot" SubtypeId="Silver" />
-        <Item Amount="5" TypeId="Ingot" SubtypeId="Gold" />
+        <Item Amount="10" TypeId="Ingot" SubtypeId="Gold" />
       </Prerequisites>
       <Result Amount="1" TypeId="Component" SubtypeId="PowerCredit2" />
       <BaseProductionTimeInSeconds>24</BaseProductionTimeInSeconds>
@@ -66,11 +65,11 @@
         <SubtypeId>PowerCredit2Component_Platinum</SubtypeId>
       </Id>
       <DisplayName>Power Credit 2 (Platinum)</DisplayName>
-      <Icon>Textures\PowerCredit2_Item.dds</Icon>
+      <Icon>Textures\PowerCredit2_Recipe_Platinum.dds</Icon>
       <Prerequisites>
-        <Item Amount="1000" TypeId="Ingot" SubtypeId="Iron" />
-        <Item Amount="100" TypeId="Ingot" SubtypeId="Silicon" />
-        <Item Amount="50" TypeId="Ingot" SubtypeId="Nickel" />
+        <Item Amount="100" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="10" TypeId="Ingot" SubtypeId="Silicon" />
+        <Item Amount="5" TypeId="Ingot" SubtypeId="Nickel" />
         <Item Amount="10" TypeId="Ingot" SubtypeId="Platinum" />
       </Prerequisites>
       <Result Amount="1" TypeId="Component" SubtypeId="PowerCredit2" />
@@ -85,11 +84,11 @@
         <SubtypeId>PowerCredit3Component_Uranium</SubtypeId>
       </Id>
       <DisplayName>Power Credit 3 (Uranium)</DisplayName>
-      <Icon>Textures\PowerCredit3_Item.dds</Icon>
+      <Icon>Textures\PowerCredit3_Recipe_Uranium.dds</Icon>
       <Prerequisites>
-        <Item Amount="450" TypeId="Ingot" SubtypeId="Iron" />
-        <Item Amount="45" TypeId="Ingot" SubtypeId="Silicon" />
-        <Item Amount="22.5" TypeId="Ingot" SubtypeId="Nickel" />
+        <Item Amount="1000" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="100" TypeId="Ingot" SubtypeId="Silicon" />
+        <Item Amount="50" TypeId="Ingot" SubtypeId="Nickel" />
         <Item Amount="15" TypeId="Ingot" SubtypeId="Silver" />
         <Item Amount="3" TypeId="Ingot" SubtypeId="Uranium" />
       </Prerequisites>
