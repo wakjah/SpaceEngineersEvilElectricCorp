@@ -4,6 +4,8 @@ using Sandbox.Definitions;
 using Sandbox.Game;
 using Sandbox.Game.Entities.Character.Components;
 using Sandbox.ModAPI;
+using System;
+using System.Collections.Generic;
 using VRage.Game;
 using VRage.Game.Components;
 using VRage.ModAPI;
@@ -11,20 +13,41 @@ using VRage.Utils;
 
 namespace EvilElectricCorpMod
 {
+    class DefinitionModifier
+    {
+        private delegate void Callable();
+
+        private List<Callable> _undoCommands = new List<Callable>();
+
+        public void Set<T, U>(T definition, Func<T, U> getter, Action<T, U> setter, U value)
+        {
+            U originalValue = getter(definition);
+            setter(definition, value);
+            _undoCommands.Add(() => setter(definition, originalValue));
+        }
+
+        public void UnsetAll()
+        {
+            foreach (var command in _undoCommands)
+            {
+                command();
+            }
+        }
+    }
+
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
     public class EvilElectricCorpSession : MySessionComponentBase
     {
         private HandCrank _usingHandCrank = null;
         private Transceiver<EvilElectricCorpCommand> _transceiver;
+        private DefinitionModifier _modifier = new DefinitionModifier();
 
-        public override void BeforeStart()
+        public override void LoadData()
         {
-            base.BeforeStart();
-
             MyDefinitionManager definitions = MyDefinitionManager.Static;
             foreach (var definition in definitions.GetDefinitionsOfType<MyBatteryBlockDefinition>())
             {
-                definition.InitialStoredPowerRatio = 0;
+                _modifier.Set(definition, d => d.InitialStoredPowerRatio, (d, v) => d.InitialStoredPowerRatio = v, 0);
             }
 
             foreach (var definition in definitions.GetDefinitionsOfType<MyPowerProducerDefinition>())
@@ -37,9 +60,12 @@ namespace EvilElectricCorpMod
                     continue;
                 }
 
-                definition.MaxPowerOutput = 0;
+                _modifier.Set(definition, d => d.MaxPowerOutput, (d, v) => d.MaxPowerOutput = v, 0);
             }
+        }
 
+        public override void BeforeStart()
+        {
             _transceiver = new Transceiver<EvilElectricCorpCommand>(63961, HandleCommand);
             _transceiver.Register();
         }
@@ -48,6 +74,8 @@ namespace EvilElectricCorpMod
         {
             _transceiver?.Unregister();
             _transceiver = null;
+
+            _modifier.UnsetAll();
         }
 
         public bool IsBlockDefinitionFromThisMod(MyDefinitionBase definition)
